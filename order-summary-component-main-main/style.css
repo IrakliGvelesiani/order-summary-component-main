@@ -1,0 +1,150 @@
+@import url("https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@500;700;900&display=swap");
+
+* {
+  font-family: "Red Hat Display", sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+:root {
+  --dark-blue: hsl(223, 47%, 23%);
+  --desaturated-blue: hsl(224, 23%, 55%);
+  --verypale-blue: hsl(225, 100%, 98%);
+  --pale-blue: hsl(225, 100%, 94%);
+  --bright-blue: hsl(245, 75%, 52%);
+}
+body {
+  min-height: 100vh;
+  background-image: url(images/pattern-background-desktop.svg);
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-color: var(--pale-blue);
+  position: relative;
+  font-size: 13px;
+}
+
+.container {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  max-width: 450px;
+  background-color: #fff;
+  border-radius: 20px;
+  overflow: hidden;
+}
+
+.content-text {
+  padding: 7%;
+  text-align: center;
+}
+
+.title {
+  color: var(--dark-blue);
+  font-weight: 900;
+  font-size: 32px;
+  margin-bottom: 20px;
+}
+
+.content-text p.subtitle {
+  color: #8a8a8a;
+}
+
+.plan-box {
+  background-color: var(--verypale-blue);
+  border-radius: 12px;
+  display: flex;
+  padding: 30px;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+
+.left-side {
+  display: flex;
+  align-items: center;
+  text-align: left;
+}
+
+.left-side div {
+  margin-left: 30px;
+}
+
+.left-side div h5 {
+  font-weight: 900;
+  font-size: 15px;
+  color: var(--dark-blue);
+}
+.left-side div p {
+  font-weight: 900;
+  font-size: 12px;
+  color: #8a8a8a;
+}
+
+a:hover {
+  text-decoration: none;
+  color: var(--bright-blue);
+  transition: color 0.3sec ease;
+}
+
+.plan-box a {
+  font-weight: 900;
+  color: var(--dark-blue);
+}
+
+a.procceed-btn {
+  display: block;
+  text-decoration: none;
+  color: #fff;
+  background-color: var(--bright-blue);
+  padding: 20px 0;
+  border-radius: 12px;
+  margin: 30px 0;
+}
+
+a.procceed-btn:hover {
+  background-color: var(--desaturated-blue);
+  transition: color 0.3sec ease;
+}
+
+a.cancel-btn {
+  color: var(--desaturated-blue);
+  text-decoration: none;
+  font-weight: 900;
+}
+
+a.cancel-btn:hover {
+  color: var(--dark-blue);
+  transition: color 0.3sec ease;
+}
+
+@media only screen and (max-width: 425px) {
+  body {
+    background-image: url(images/pattern-background-mobile.svg);
+    font-size: 12px;
+  }
+
+  .container {
+    max-width: 87%;
+  }
+  .title {
+    font-size: 23px;
+  }
+
+  .plan-box {
+    padding: 12px;
+  }
+  .left-side div {
+    margin-left: 20px;
+  }
+
+  a.procceed-btn,
+  a.cancel-btn,
+  .plan-box a {
+    font-size: 12px;
+  }
+
+  .content-text {
+    padding: 15px 10px;
+  }
+}
